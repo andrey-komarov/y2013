@@ -8,7 +8,7 @@ import           Hakyll
 
 config :: Configuration
 config = defaultConfiguration 
-    { deployCommand = "scp -r _site rain:~/public_html" 
+    { deployCommand = "scp -r _site/* rain:~/public_html" 
     }
 
 main :: IO ()
