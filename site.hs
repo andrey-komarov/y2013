@@ -31,6 +31,10 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "pdf/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
