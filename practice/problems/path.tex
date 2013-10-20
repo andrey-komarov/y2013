@@ -1,0 +1,49 @@
+\begin{problem}{Shortest Path}{path.in}{path.out}{2 seconds}{64 megabytes}
+
+% Author: Andrew Stankevich
+
+You are given a weighed directed graph and a vertex $s$ in it.
+For each vertex $u$ find the length of the shortest path from $s$ to $u$.
+
+\InputFile
+
+The first line of the input file contains $n$, $m$ and $s$ --- the number
+of vertices and edges in the graph, and the number of the starting
+vertex, respectively ($2 \le n \le 2\,000$, $1 \le m \le 5\,000$). 
+
+The following $m$ lines describe edges. Each
+edge is specified with its start vertex, its end vertex, and its weight.
+The weight of any edge is integer and does not exceed $10^{15}$ by its 
+absolute value. There can be several edges between a pair of vertices. 
+There can be an edge between a vertex and itself.
+
+\OutputFile
+
+Output $n$ lines --- for each vertex $u$ output the length
+of the shortest path from $s$ to $u$, `\t{*}' if there is no path
+from $s$ to $u$, or `\t{-}' if there is no shortest path from $s$ 
+to $u$.
+
+\Example
+
+\begin{example}
+\exmp{
+6 7 1
+1 2 10
+2 3 5
+1 3 100
+3 5 7
+5 4 10
+4 3 -18
+6 1 -1
+}{
+0
+10
+-
+-
+-
+*
+}%
+\end{example}
+
+\end{problem}
