@@ -1,0 +1,53 @@
+\begin{problem}{Переместить в начало}{movetofront.in}{movetofront.out}{2 секунды}
+
+% Author: Andrew Stankevich
+% Перевод: Сергей Мельников
+
+Вам дан массив $a_1 = 1, a_2 = 2, \ldots, a_n = n$ и последовальность операций: 
+переместить элементы с $l_i$ по $r_i$ в начало массива.
+%You have an array $a_1 = 1, a_2 = 2, \ldots, a_n = n$
+%and a sequence of queries: move elements from $l_i$ to $r_i$ 
+%to front.
+Например, для массива $2, 3, 6, 1, 5, 4$, после операции
+$(2, 4)$ новый порядок будет $3, 6, 1, 2, 5, 4$.
+%For example, if the array is $2, 3, 6, 1, 5, 4$, after the query 
+%$(2, 4)$ the new order of elements in the array is $3, 6, 1, 2, 5, 4$. 
+А после применения операции $(3, 4)$ порядок элементов в массиве будет $1, 2, 3, 6, 5, 4$.
+%If, for example, the query $(3, 4)$ follows,
+%the new order of elements is $1, 2, 3, 6, 5, 4$.
+
+Выведите порядок элементов в массиве после выполнения всех операций.
+%Print the final order of elements in the array.
+
+\InputFile
+В первой строке входного файла указаны числа $n$ и $m$
+($2 \le n \le 100\,000$, $1 \le m \le 100\,000$) --- число элементов в массиве и число операций.
+Следующие $m$ строк содержат операции в виде двух целых чисел:
+$l_i$ и $r_i$ ($1 \le l_i \le r_i \le n$).
+
+%The first line of the input file contains two integer numbers
+%$n$ and $m$ ($2 \le n \le 100\,000$, $1 \le m \le 100\,000$)~---
+%the number of elements and the number of queries. The
+%following $m$ lines contain queries, each line contains two
+%integer numbers $l_i$ and $r_i$ ($1 \le l_i \le r_i \le n$).
+
+\OutputFile
+Выведите $n$ целых чисел~--- порядок элементов в массиве после применения всех операций.
+%Output $n$ integer numbers --- the order of elements in the 
+%final array, after executing all queries.
+
+\Example
+
+\begin{example}
+\exmp{
+6 3
+2 4
+3 5
+2 2
+}{
+1 4 5 2 3 6
+}%
+\end{example}
+
+\end{problem}
+
